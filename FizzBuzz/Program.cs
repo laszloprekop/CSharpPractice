@@ -1,11 +1,11 @@
 /*
  * Test cases:
- * "2 3 7" -> 1, Fizz, Buzz, Fizz, 5, FizzBuzz, 7
- * "2 4 7" -> 1, Fizz, 3, FizzBuzz, 5, Fizz, 7
- * "3 5 7" -> 1, 2, Buzz, 4, Buzz, Fizz, 7
+ * 2 3 7 -> 1, Fizz, Buzz, Fizz, 5, FizzBuzz, 7
+ * 2 4 7 -> 1, Fizz, 3, FizzBuzz, 5, Fizz, 7
+ * 3 5 7 -> 1, 2, Buzz, 4, Buzz, Fizz, 7
  *
- * "1 1 5" -> FizzBuzz, FizzBuzz, FizzBuzz, FizzBuzz, FizzBuzz - always both true
- * "5 7 1" -> 1 - no divisibility
+ * 1 1 5 -> FizzBuzz, FizzBuzz, FizzBuzz, FizzBuzz, FizzBuzz - always both true
+ * 5 7 1 -> 1 - no divisibility
  */
 
 
@@ -18,6 +18,13 @@
  *   else if I divisible by X       → print "Fizz"
  *   else if I divisible by Y       → print "Buzz"
  *   else                           → print I
-*/
+ */
 
+var result = "";
+foreach (var (index, arg) in args.Select((arg, index) => (index, arg)))
+{
+    string separator =  index == args.Length - 1 ? "" : ", ";
+    result += arg + separator;
+}
 
+Console.Write(result);
