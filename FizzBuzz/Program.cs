@@ -20,4 +20,18 @@
  *   else                           → print I
  */
 
-Console.Write(string.Join(", ", args));
+var x = int.Parse(args[0]);
+var y = int.Parse(args[1]);
+var n = int.Parse(args[2]);
+
+var results = new List<String>();
+
+for (int i = 1; i <= n; i++)
+{
+    if (i % x == 0 && i % y == 0) results.Add("FizzBuzz");
+    else if (i % x == 0) results.Add("Fizz");
+    else if (i % y == 0) results.Add("Buzz");
+    else results.Add(i.ToString());
+}
+
+Console.Write(string.Join(", ", results));
