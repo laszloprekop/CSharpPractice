@@ -2,10 +2,10 @@
 
 using System.Diagnostics;
 
-Console.WriteLine();
+// Console.WriteLine();
 
 /*
-Display as Strings of arguments
+// Respond as Strings of arguments
 
 foreach (var s in args)
 {
@@ -16,9 +16,11 @@ Console.WriteLine();
 
 */
 
-// Display a random answer
+
+
+// Respond with a random answer
 
 string[] answers = [ "Yes", "No", "Maybe" ];
 
-var index = new Random().Next(answers.Length-1);
+var index = new Random().Next(answers.Length);
 Console.WriteLine(answers[index]);
