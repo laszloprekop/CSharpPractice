@@ -20,17 +20,12 @@
  *   else                           → print I
  */
 
-
-var results = new List<String>();
-
 var (x, y, n) = ParseArgs(args);
 
-for (int i = 1; i <= n; i++)
-{
-    results.Add(GetResult(x, y, i));
-}
-
-Console.Write(string.Join(", ", results));
+Console.Write(string.Join(
+    ", ",
+    Enumerable.Range(1, n)
+        .Select(i => GetResult(x, y, i))));
 
 string GetResult(int firstDivisor, int secondDivisor, int i)
 {
