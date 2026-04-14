@@ -26,21 +26,26 @@ Console.WriteLine(answers[index]);
 // testing out some ASCII animation
 using System.Threading.Tasks;
 
-const int delay = 100;
-for (var i = 0; i < 10; i++)
+await ShowProgressAnimation();
+
+static async Task ShowProgressAnimation()
 {
-    Console.Write("|");
-    await Task.Delay(delay);
-    Console.Write("\b");
-    Console.Write("/");
-    await Task.Delay(delay);
-    Console.Write("\b");
-    Console.Write("-");
-    await Task.Delay(delay);
-    Console.Write("\b");
-    Console.Write("\\");
-    await Task.Delay(delay);
-    Console.Write("\b");
+    const int delay = 100;
+    for (var i = 0; i < 10; i++)
+    {
+        Console.Write("|");
+        await Task.Delay(delay);
+        Console.Write("\b");
+        Console.Write("/");
+        await Task.Delay(delay);
+        Console.Write("\b");
+        Console.Write("-");
+        await Task.Delay(delay);
+        Console.Write("\b");
+        Console.Write("\\");
+        await Task.Delay(delay);
+        Console.Write("\b");
+    }
 }
 
 string[] answers = ["This is positive", "This is negative", "Rather not tell", "You tell me"];
