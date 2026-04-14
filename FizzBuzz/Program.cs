@@ -20,11 +20,4 @@
  *   else                           → print I
  */
 
-var result = "";
-foreach (var (index, arg) in args.Select((arg, index) => (index, arg)))
-{
-    string separator =  index == args.Length - 1 ? "" : ", ";
-    result += arg + separator;
-}
-
-Console.Write(result);
+Console.Write(string.Join(", ", args));
