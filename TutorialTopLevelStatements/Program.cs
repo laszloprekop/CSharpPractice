@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using System.Diagnostics;
+using TutorialTopLevelStatements;
 
 // Console.WriteLine();
 /*
@@ -26,27 +26,7 @@ Console.WriteLine(answers[index]);
 // testing out some ASCII animation
 using System.Threading.Tasks;
 
-await ShowProgressAnimation();
-
-static async Task ShowProgressAnimation()
-{
-    const int delay = 100;
-    for (var i = 0; i < 10; i++)
-    {
-        Console.Write("|");
-        await Task.Delay(delay);
-        Console.Write("\b");
-        Console.Write("/");
-        await Task.Delay(delay);
-        Console.Write("\b");
-        Console.Write("-");
-        await Task.Delay(delay);
-        Console.Write("\b");
-        Console.Write("\\");
-        await Task.Delay(delay);
-        Console.Write("\b");
-    }
-}
+await Utilities.ShowProgressAnimation();
 
 string[] answers = ["This is positive", "This is negative", "Rather not tell", "You tell me"];
 
