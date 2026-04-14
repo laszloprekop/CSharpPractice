@@ -20,11 +20,10 @@
  *   else                           → print I
  */
 
-var x = int.Parse(args[0]);
-var y = int.Parse(args[1]);
-var n = int.Parse(args[2]);
 
 var results = new List<String>();
+
+var (x, y, n) = ParseArgs(args);
 
 for (int i = 1; i <= n; i++)
 {
@@ -39,4 +38,12 @@ string GetResult(int firstDivisor, int secondDivisor, int i)
     if (i % firstDivisor == 0) return "Fizz";
     if (i % secondDivisor == 0) return "Buzz";
     return i.ToString();
+}
+
+(int x, int y, int n) ParseArgs(string[] args)
+{
+    var x = int.Parse(args[0]);
+    var y = int.Parse(args[1]);
+    var n = int.Parse(args[2]);
+    return (x, y, n);
 }
