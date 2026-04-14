@@ -28,10 +28,15 @@ var results = new List<String>();
 
 for (int i = 1; i <= n; i++)
 {
-    if (i % x == 0 && i % y == 0) results.Add("FizzBuzz");
-    else if (i % x == 0) results.Add("Fizz");
-    else if (i % y == 0) results.Add("Buzz");
-    else results.Add(i.ToString());
+    results.Add(GetResult(x, y, i));
 }
 
 Console.Write(string.Join(", ", results));
+
+string GetResult(int firstDivisor, int secondDivisor, int i)
+{
+    if (i % firstDivisor == 0 && i % secondDivisor == 0) return "FizzBuzz";
+    if (i % firstDivisor == 0) return "Fizz";
+    if (i % secondDivisor == 0) return "Buzz";
+    return i.ToString();
+}
