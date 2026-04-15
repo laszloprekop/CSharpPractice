@@ -34,11 +34,6 @@
 
 if (args.Length != 3)
 {
-    Console.Error.WriteLine($"Error: expected 3 arguments but got {args.Length}.");                                                             
-    Console.Error.WriteLine("Usage: dotnet run --project FizzBuzz -- <x> <y> <n>");                                                                        
-    Console.Error.WriteLine("  x  first divisor");                         
-    Console.Error.WriteLine("  y  second divisor");                        
-    Console.Error.WriteLine("  n  upper bound (inclusive)");                      
     Console.Error.WriteLine($"Error: expected 3 arguments but got {args.Length}.");
     Console.Error.WriteLine("Usage: dotnet run --project FizzBuzz -- <x> <y> <n>");
     Console.Error.WriteLine("  x  first divisor");
@@ -62,25 +57,16 @@ string GetResult(int firstDivisor, int secondDivisor, int i)
     return i.ToString();
 }
 
-(int x, int y, int n) ParseArgs(string[] args)
+(int x, int y, int n) ParseArgs(string[] args) =>
+    (ParseArg(args[0], "x"), ParseArg(args[1], "y"), ParseArg(args[2], "n"));
+
+int ParseArg(string value, string name)
 {
-    if (!int.TryParse(args[0], out var x) || x <= 0)
+    if (!int.TryParse(value, out var result) || result <= 0)
     {
-        Console.Error.WriteLine($"<x> must be a positive integer (got {args[0]})");
+        Console.Error.WriteLine($"<{name}> must be a positive integer (got {value})");
         Environment.Exit(1);
     }
 
-    if (!int.TryParse(args[1], out var y) || y <= 0)
-    {
-        Console.Error.WriteLine($"<y> must be a positive integer (got {args[1]})");
-        Environment.Exit(1);
-    }
-
-    if (!int.TryParse(args[2], out var n) || n <= 0)
-    {
-        Console.Error.WriteLine($"<x> must be a positive integer greater than 0 (got {args[2]})");
-        Environment.Exit(1);
-    }
-
-    return (x, y, n);
+    return result;
 }
