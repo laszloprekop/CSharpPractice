@@ -6,6 +6,9 @@
  *
  * 1 1 5 -> FizzBuzz, FizzBuzz, FizzBuzz, FizzBuzz, FizzBuzz - always both true
  * 5 7 1 -> 1 - no divisibility
+ *
+ * assuming running the code with a command similar to the following:
+ * > dotnet run --project FizzBuzz -- 2 3 7
  */
 
 
@@ -18,6 +21,15 @@
  *   else if I divisible by X       → print "Fizz"
  *   else if I divisible by Y       → print "Buzz"
  *   else                           → print I
+ */
+
+
+/*
+ * Error handling considerations:
+ * - Incorrect number of arguments
+ * - Non-integer arguments
+ * - Invalid values (e.g., zero)
+ * - usage hint, example
  */
 
 var (x, y, n) = ParseArgs(args);
