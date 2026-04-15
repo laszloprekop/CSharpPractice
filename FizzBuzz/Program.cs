@@ -32,6 +32,16 @@
  * - usage hint, example
  */
 
+if (args.Length != 3)
+{
+    Console.Error.WriteLine($"Error: expected 3 arguments but got {args.Length}.");                                                             
+    Console.Error.WriteLine("Usage: dotnet run --project FizzBuzz -- <x> <y> <n>");                                                                        
+    Console.Error.WriteLine("  x  first divisor");                         
+    Console.Error.WriteLine("  y  second divisor");                        
+    Console.Error.WriteLine("  n  upper bound (inclusive)");                      
+    return;
+}
+
 var (x, y, n) = ParseArgs(args);
 
 Console.Write(string.Join(
