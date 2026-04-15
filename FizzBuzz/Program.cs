@@ -59,8 +59,23 @@ string GetResult(int firstDivisor, int secondDivisor, int i)
 
 (int x, int y, int n) ParseArgs(string[] args)
 {
-    var x = int.Parse(args[0]);
-    var y = int.Parse(args[1]);
-    var n = int.Parse(args[2]);
+    if (!int.TryParse(args[0], out var x) || x <= 0)
+    {
+        Console.Error.WriteLine($"<x> must be a positive integer (got {args[0]})");
+        Environment.Exit(1);
+    }
+
+    if (!int.TryParse(args[1], out var y) || y <= 0)
+    {
+        Console.Error.WriteLine($"<y> must be a positive integer (got {args[1]})");
+        Environment.Exit(1);
+    }
+
+    if (!int.TryParse(args[2], out var n) || n <= 0)
+    {
+        Console.Error.WriteLine($"<x> must be a positive integer greater than 0 (got {args[2]})");
+        Environment.Exit(1);
+    }
+
     return (x, y, n);
 }
