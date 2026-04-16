@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 
 import IncidentCard from './components/IncidentCard'
+import IncidentMap from './components/IncidentMap'
 
 const API_URL = 'http://localhost:5116/api/incidents'
 
@@ -33,8 +34,8 @@ function App() {
             <IncidentCard key={incident.id} incident={incident}/>))}
         </div>
       </aside>
-      <main className="flex-1 bg-gray-100 flex items-center justify-center">
-        <p className="text-gray-400">Map placeholder</p>
+      <main className="flex-1">
+        <IncidentMap incidents={incidents}/>
       </main>
     </div>
   )
