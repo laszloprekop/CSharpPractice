@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
 
+import IncidentCard from './components/IncidentCard'
+
 const API_URL = 'http://localhost:5116/api/incidents'
 
 function App() {
@@ -28,12 +30,7 @@ function App() {
         <div className="flex-1 overflow-y-auto p-2">
           {loading && <p className="text-center">Laddar...</p>}
           {incidents.map(incident => (
-            <div key={incident.id} className="p-3 mb-2 rounded border border-gray-200 shadow">
-              <p className="font-semibold">{incident.type}</p>
-              <p className="text-xs text-gray-500">{incident.location.name}</p>
-              <p className="text-xs mt-1">{incident.summary}</p>
-            </div>
-          ))}
+            <IncidentCard key={incident.id} incident={incident}/>))}
         </div>
       </aside>
       <main className="flex-1 bg-gray-100 flex items-center justify-center">
