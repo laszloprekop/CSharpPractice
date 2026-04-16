@@ -14,7 +14,7 @@ function IncidentCard({incident}) {
           className="text-xs font-semibold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">{incident.type}</span>
         <span className="text-xs text-gray-400">{date}</span>
       </div>
-      <p className="text-xs font-medium text-gray-400">{incident.location.name}</p>
+      <p className="text-xs font-medium text-gray-400">{incident.location?.name}</p>
       <p className="text-xs text-gray-500 mt-1 line-clamp-2">{incident.summary}</p>
     </a>
   )
