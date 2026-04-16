@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react'
 import IncidentCard from './components/IncidentCard'
 import IncidentMap from './components/IncidentMap'
 
-const API_URL = 'http://localhost:5116/api/incidents'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5116/api/incidents'
 
 function App() {
   const [incidents, setIncidents] = useState([])
