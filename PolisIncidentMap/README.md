@@ -1,5 +1,7 @@
 # PolisIncidentMap
 
+**Live demo: [polis-incidents-map.dentaku.se](https://polis-incidents-map.dentaku.se/)**
+
 A fullstack web app displaying live Swedish police incidents on an interactive map.
 
 Adapted from an Android/Kotlin project built during the Linero course (module203).
