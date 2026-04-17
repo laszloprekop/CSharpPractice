@@ -1,6 +1,16 @@
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+})
 
 const SWEDEN_CENTER = [60.170887, 18.643501]
 
@@ -38,6 +48,7 @@ const createClusterIcon = (cluster) => {
 
 function IncidentMap({incidents}) {
   const mapped = incidents.filter(i => {
+    if (!i.location || !i.location.gps) return false
     const [lat, lng] = i.location.gps.split(',').map(Number)
     return lat !== 0 && lng !== 0
   })
@@ -52,7 +63,7 @@ function IncidentMap({incidents}) {
     />
     <MarkerClusterGroup iconCreateFunction={createClusterIcon}>
       {mapped.map(incident => {
-        const [lat, lng] = incident.location.gps.split(',').map(Number)
+        const [lat, lng] = incident.location?.gps.split(',').map(Number)
         return (<Marker key={incident.id} position={[lat, lng]}>
           <Popup>
             <strong>{incident.type}</strong><br/>
