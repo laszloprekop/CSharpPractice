@@ -63,7 +63,7 @@ function App() {
             ))}
           </select>
         </div>
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto bg-gray-50">
           {loading && <p className="text-center">Laddar...</p>}
           {filteredIncidents.map(incident => (
             <IncidentCard key={incident.id} incident={incident}/>))}
