@@ -19,4 +19,8 @@ long veryLongDay = numberOfHoursStudied;
 double d = 123456789.0;
 int x = (int)d; // explicitly cast to int
 
+int intVeryLongDay = (int)veryLongDay;
+
+Console.WriteLine($"A very long day as an integer: {intVeryLongDay}");
+
 Console.ReadLine();
