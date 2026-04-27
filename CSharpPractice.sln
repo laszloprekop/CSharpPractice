@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFromCSharp", "HelloFro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pluralsight-CSharpFundamentals", "Pluralsight-CSharpFundamentals", "{3C6E0937-27E5-4898-B576-96C03AC764AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethanysPieShopHRM", "BethanysPieShopHRM\BethanysPieShopHRM.csproj", "{AE427CF4-3F34-424D-BA1C-72430FB2AC04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE427CF4-3F34-424D-BA1C-72430FB2AC04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE427CF4-3F34-424D-BA1C-72430FB2AC04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE427CF4-3F34-424D-BA1C-72430FB2AC04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE427CF4-3F34-424D-BA1C-72430FB2AC04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,5 +69,6 @@ Global
 		{7E6FC34E-2BCF-43BD-9854-4CBBB705F8AE} = {ADCE7CFD-83BA-4FC6-AF50-858CA7FC6405}
 		{3C6E0937-27E5-4898-B576-96C03AC764AD} = {DACC1D94-B66D-4FD7-A903-724689E32896}
 		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE} = {3C6E0937-27E5-4898-B576-96C03AC764AD}
+		{AE427CF4-3F34-424D-BA1C-72430FB2AC04} = {3C6E0937-27E5-4898-B576-96C03AC764AD}
 	EndGlobalSection
 EndGlobal
