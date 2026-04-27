@@ -1,7 +1,5 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpPractice", "CSharpPractice\CSharpPractice.csproj", "{150CF76A-E663-4475-8B4E-22ED23AB8A40}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DACC1D94-B66D-4FD7-A903-724689E32896}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenges", "Challenges", "{9ADD1911-C330-412A-83A0-3EB3CADA44A6}"
@@ -20,16 +18,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz-Kattis", "FizzBuzz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolisIncidentMap.Api", "PolisIncidentMap\backend\PolisIncidentMap.Api.csproj", "{7E6FC34E-2BCF-43BD-9854-4CBBB705F8AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFromCSharp", "HelloFromCSharp\HelloFromCSharp.csproj", "{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pluralsight-CSharpFundamentals", "Pluralsight-CSharpFundamentals", "{3C6E0937-27E5-4898-B576-96C03AC764AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{150CF76A-E663-4475-8B4E-22ED23AB8A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{150CF76A-E663-4475-8B4E-22ED23AB8A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{150CF76A-E663-4475-8B4E-22ED23AB8A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{150CF76A-E663-4475-8B4E-22ED23AB8A40}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4390C0BF-5196-470E-8186-0A3F151ED8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4390C0BF-5196-470E-8186-0A3F151ED8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4390C0BF-5196-470E-8186-0A3F151ED8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,6 +44,10 @@ Global
 		{7E6FC34E-2BCF-43BD-9854-4CBBB705F8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6FC34E-2BCF-43BD-9854-4CBBB705F8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6FC34E-2BCF-43BD-9854-4CBBB705F8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +61,7 @@ Global
 		{9C1DA076-78ED-495B-A9AE-ADEF191A221A} = {9ADD1911-C330-412A-83A0-3EB3CADA44A6}
 		{0901D6D9-100E-4041-8148-8E6E0BE5C8CF} = {1955BC19-FDC3-4079-AAAF-693CD8A65348}
 		{7E6FC34E-2BCF-43BD-9854-4CBBB705F8AE} = {ADCE7CFD-83BA-4FC6-AF50-858CA7FC6405}
+		{3C6E0937-27E5-4898-B576-96C03AC764AD} = {DACC1D94-B66D-4FD7-A903-724689E32896}
+		{53B787A1-79C5-4C9F-9FFE-DD99A9A2CBBE} = {3C6E0937-27E5-4898-B576-96C03AC764AD}
 	EndGlobalSection
 EndGlobal
