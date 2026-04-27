@@ -35,6 +35,7 @@ double m = 11.2;
 
 /*
  * Implicit typing: C# figures out the type of the variable based on the value assigned to it.
+ * (Type will be inferred).
  */
 
 var n = 123; // n will be an integer
