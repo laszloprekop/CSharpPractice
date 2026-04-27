@@ -11,3 +11,12 @@ Console.WriteLine($"Total Days: {workPeriod.TotalDays}");
 Console.WriteLine($"Start date: {hireDate.ToLongDateString()}");
 Console.WriteLine($"End date: {exitDate.ToShortDateString()}");
 Console.WriteLine($"End time: {exitDate.ToShortTimeString()}");
+
+int numberOfHoursStudied = 11;
+
+long veryLongDay = numberOfHoursStudied;
+
+double d = 123456789.0;
+int x = (int)d; // explicitly cast to int
+
+Console.ReadLine();
