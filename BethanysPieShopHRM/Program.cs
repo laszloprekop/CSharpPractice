@@ -23,10 +23,8 @@ else if (age > 65)
 switch (age)
 {
     case < 18:
-        Console.WriteLine("Too young to apply.");
-        break;
     case > 65:
-        Console.WriteLine("Too old to apply.");
+        Console.WriteLine("You are not old enough or too old to apply.");
         break;
     case 23:
         Console.WriteLine("You are 23 years old. You can start with the application right now.");
